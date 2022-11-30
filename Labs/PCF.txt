@@ -1,0 +1,45 @@
+pac pcf init --namespace firstpcf --name firstPCFcontrol --template Field
+npm install
+
+npm run build
+npm start
+
+tested and control working fine
+Created a new folder under the project folder
+move to solutions folder
+
+pac solution init --publisher-name jpower4dev --publisher-prefix dev
+
+pac solution add-reference --path "C:\Jenkins\JPower4\Training\Training Materials\PowerPlatform-Advanced\Code\firstPCF"
+
+if msbuild error, after installing VS 2017/2019 - set the enviroment variable 
+%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin
+
+msbuild /t:build /restore
+
+take Environment URL
+org6f71231c.crm8.dynamics.com
+
+just move back to project folder
+pac auth create --url https://org6f71231c.crm8.dynamics.com
+
+inProject folder
+pac pcf push --publisher-prefix dev
+
+Solution addedd in your environment 
+
+Enable Power Apps component framework for canvas apps (one time activity)
+admin center Select your environment  --> Settings --> features --> Power Apps component framework for canvas apps --> set the flag on - Allow publishing of canvas apps with code components
+save it
+
+then create canvas app and test it
+- add new blank canvas app
+- press + icon in the left hand side
+- click get component link in the bottom
+- code tab
+- import your control
+- then add it in your canvas app
+
+
+
+
